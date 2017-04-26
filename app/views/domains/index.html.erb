@@ -1,0 +1,10 @@
+<h1><%= @domain_name %></h1>
+
+<% @ns_records.each do |ns_record| %>
+<h2><%= ns_record.name %></h2>
+<ul>
+  <% ns_record.resource_records.each do |record| %>
+  <li><%= record.value %></li>
+  <% end %>
+</ul>
+<% end %>
