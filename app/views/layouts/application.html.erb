@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>ServiceDomainAdmin</title>
-    <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+<% end %>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+<% content_for :page_title, ' - Service domain admin - GOV.UK' %>
+
+<% content_for :content do %>
+  <main id="content">
+    <%= content_for?(:main) ? yield(:main) : yield %>
+  </main>
+<% end %>
+
+<%= render file: 'layouts/govuk_template' %>

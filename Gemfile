@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'govuk_template', '0.20.0'
+
 gem 'aws-sdk', '2.9.11'
 
 group :development, :test do
