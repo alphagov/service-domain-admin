@@ -54,3 +54,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # send exceptions to sentry
 gem "sentry-raven"
+
+# we want json logs
+gem 'logstasher'
+
